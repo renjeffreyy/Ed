@@ -1,15 +1,16 @@
 import React from 'react';
 
 //components
-import Timer from './components/Timer.component';
+
 import About from './components/About.component';
+import Landing from './components/Landing.component';
 
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Timer />
+      <Landing />
       <About />
     </div>
   );

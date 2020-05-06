@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Moment from 'react-moment';
 
+import { device } from './MediaQuieries';
+
 const TimerDisplay = styled.p`
   z-index: 2;
   font-size: 2rem;
@@ -36,27 +38,28 @@ const TimerDisplay = styled.p`
       border-right-color: transparent;
     }
   }
-  /* fade in animation */
-  /* animation: fadeInAnimation 2s ease 5s 1;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 
-  @keyframes fadeInAnimation {
-    0% {
-      visibility: visible;
-      font-size: 2rem;
-      opacity: 0;
-    }
+  /* media queries */
+  @media ${device.Laptop} {
+    font-size: 2rem;
+  }
 
-    50% {
-      font-size: 7rem;
-    }
-    100% {
-      visibility: visible;
-      opacity: 1;
-      font-size: 2rem;
-    }
-  } */
+  @media ${device.tablet} {
+    font-size: 1.75rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 1.2rem;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 1rem;
+  }
+  @media ${device.mobileM} {
+    font-size: 0.87rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 0.87rem;
+  }
 `;
 
 const Timer = () => {

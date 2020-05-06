@@ -4,6 +4,8 @@ import Screen from '../assets/computer-monitor.svg';
 
 import Timer from './Timer.component';
 
+import { device } from './MediaQuieries';
+
 const Monitor = styled.img`
   position: absolute;
   /* height: 100vh; */
@@ -30,6 +32,14 @@ const LandingDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${device.tablet} {
+    height: 100vh;
+  }
+
+  @media ${device.mobileM} {
+    height: 50vh;
+  }
 `;
 
 const Title = styled.p`
@@ -44,6 +54,27 @@ const Title = styled.p`
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 3;
+
+  /* media queries  */
+
+  @media ${device.laptop} {
+    font-size: 3rem;
+  }
+  @media ${device.tablet} {
+    font-size: 2.5rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 1.7rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 1.5rem;
+  }
+  @media ${device.mobileM} {
+    font-size: 1.2rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 1rem;
+  }
 `;
 
 const Landing = () => {
